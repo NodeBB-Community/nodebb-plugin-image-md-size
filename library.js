@@ -1,25 +1,22 @@
 function getSetString(match, src, width, height) {
 
     if (width === "" && height === "") {
-
         return match;
     }
 
-    return "<img src=\"" + src + "\" width=\"" + width + "\" height=\"" + height + "\"" + " style=\"height:" + height + "px;\"";
+    return `<img src="${src}" style="width:${width}px!important; height:${height}px!important;"`;
 }
 
 function getPercentString(match, src, percent) {
-    return "<img src=\"" + src + "\" width=\"" + percent + "%\"" + " height=\"" + 'auto' + "\"";
+    return `<img src="${src}" style="width:${percent}%!important; height: auto!important;"`;
 }
 
 function getWidthString(match, src, width) {
-
     if (width === "") {
-
         return match;
     }
 
-    return "<img src=\"" + src + "\" width=\"" + width + "\" height=\"" + 'auto' + "\"";
+    return `<img src="${src}" style="width: ${width}px!important; height: auto!important;"`;
 }
 
 function replaceContent(data) {
